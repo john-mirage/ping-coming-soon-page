@@ -45,36 +45,32 @@
     <main class="mb-116">
       <h2 class="font-300 text-22 text-gray mb-16 lg:text-48">We are launching <span class="text-very-dark-blue font-600">soon!</span></h2>
       <p class="font-300 text-12 text-very-dark-blue mb-28 lg:text-20 lg:mb-32">Subscribe and get notified</p>
-      <form class="mb-72 lg:flex lg:flex-row lg:items-center lg:mb-92">
-        <label class="sr-only" for="email-input">email</label>
-        <input class="block w-full h-40 px-32 mb-10 rounded-full border border-pale-blue font-300 text-12 text-very-dark-blue placeholder-pale-blue focus:border-blue focus:outline-none lg:flex-1 lg:mb-0 lg:h-56 lg:mr-16 lg:text-16" placeholder="Your email address..." id="email-input" type="email">
-        <button class="block w-full h-40 rounded-full bg-blue font-700 text-12 text-white lg:w-200 lg:h-56 lg:text-16">Notify Me</button>
-      </form>
-      <img src="/src/images/illustration-dashboard.png" alt="dashboard illustration">
+      <form is="web-form" class="relative mb-72 lg:flex lg:flex-row lg:items-center lg:mb-92"></form>
+      <img draggable="false" src="/src/images/illustration-dashboard.png" alt="dashboard illustration">
     </main>
     <!-- Footer -->
     <footer>
       <nav class="mb-24">
         <ul class="flex flex-row items-center justify-center space-x-12">
           <li>
-            <a class="icon" href="">
-              <svg class="icon__shape" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="currentColor">
+            <a class="icon-link" href="">
+              <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="currentColor">
                 <title>Logo Facebook</title>
                 <path d="M480 257.35c0-123.7-100.3-224-224-224s-224 100.3-224 224c0 111.8 81.9 204.47 189 221.29V322.12h-56.89v-64.77H221V208c0-56.13 33.45-87.16 84.61-87.16 24.51 0 50.15 4.38 50.15 4.38v55.13H327.5c-27.81 0-36.51 17.26-36.51 35v42h62.12l-9.92 64.77H291v156.54c107.1-16.81 189-109.48 189-221.31z" fill-rule="evenodd"/>
               </svg>
             </a>
           </li>
           <li>
-            <a class="icon" href="">
-              <svg class="icon__shape" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="currentColor">
+            <a class="icon-link" href="">
+              <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="currentColor">
                 <title>Logo Twitter</title>
                 <path d="M496 109.5a201.8 201.8 0 01-56.55 15.3 97.51 97.51 0 0043.33-53.6 197.74 197.74 0 01-62.56 23.5A99.14 99.14 0 00348.31 64c-54.42 0-98.46 43.4-98.46 96.9a93.21 93.21 0 002.54 22.1 280.7 280.7 0 01-203-101.3A95.69 95.69 0 0036 130.4c0 33.6 17.53 63.3 44 80.7A97.5 97.5 0 0135.22 199v1.2c0 47 34 86.1 79 95a100.76 100.76 0 01-25.94 3.4 94.38 94.38 0 01-18.51-1.8c12.51 38.5 48.92 66.5 92.05 67.3A199.59 199.59 0 0139.5 405.6a203 203 0 01-23.5-1.4A278.68 278.68 0 00166.74 448c181.36 0 280.44-147.7 280.44-275.8 0-4.2-.11-8.4-.31-12.5A198.48 198.48 0 00496 109.5z"/>
               </svg>
             </a>
           </li>
           <li>
-            <a class="icon" href="">
-              <svg class="icon__shape" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="currentColor">
+            <a class="icon-link" href="">
+              <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="currentColor">
                 <title>Logo Instagram</title>
                 <path d="M349.33 69.33a93.62 93.62 0 0193.34 93.34v186.66a93.62 93.62 0 01-93.34 93.34H162.67a93.62 93.62 0 01-93.34-93.34V162.67a93.62 93.62 0 0193.34-93.34h186.66m0-37.33H162.67C90.8 32 32 90.8 32 162.67v186.66C32 421.2 90.8 480 162.67 480h186.66C421.2 480 480 421.2 480 349.33V162.67C480 90.8 421.2 32 349.33 32z"/>
                 <path d="M377.33 162.67a28 28 0 1128-28 27.94 27.94 0 01-28 28zM256 181.33A74.67 74.67 0 11181.33 256 74.75 74.75 0 01256 181.33m0-37.33a112 112 0 10112 112 112 112 0 00-112-112z"/>
@@ -86,6 +82,18 @@
       <p class="font-300 text-10 text-gray lg:text-12">&copy; Copyright Ping. All rights reserved.</p>
     </footer>
   </div>
+  <!-- Template | Form -->
+  <template id="template-form">
+    <label class="sr-only" data-name="label">email</label>
+    <input
+      class="block w-full h-40 px-32 mb-10 rounded-full border border-gray font-300 text-12 text-very-dark-blue placeholder-gray focus:border-blue focus:outline-none lg:flex-1 lg:mb-0 lg:h-56 lg:mr-16 lg:text-16"
+      placeholder="Your email address..."
+      type="text"
+      data-name="input"
+    >
+    <button class="block w-full h-40 rounded-full bg-gray font-700 text-12 text-white lg:w-200 lg:h-56 lg:text-16" disabled data-name="button">Notify Me</button>
+    <p class="absolute -bottom-6 left-1/2 -translate-x-1/2 translate-y-full font-300 italic text-10 text-light-red lg:left-32 lg:translate-x-0 lg:text-12 lg:-bottom-8" data-name="error"></p>
+  </template>
   <!-- Module -->
   <script type="module" src="/src/main.ts"></script>
 </body>

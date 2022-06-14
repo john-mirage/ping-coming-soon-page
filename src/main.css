@@ -3,10 +3,10 @@
 @tailwind utilities;
 
 @layer components {
-    .icon {
-        @apply flex justify-center items-center w-32 h-32 rounded-full border border-pale-blue text-blue;
+    .icon-link {
+        @apply flex justify-center items-center w-32 h-32 rounded-full border border-pale-blue text-blue hover:bg-blue hover:border-blue hover:text-white;
     }
-    .icon__shape {
+    .icon {
         @apply w-auto h-16;
     }
 }
