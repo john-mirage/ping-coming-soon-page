@@ -7,12 +7,17 @@ module.exports = {
     "./src/**/*.{vue,js,ts,jsx,tsx}",
   ],
   theme: {
+    screens: {
+      sm: "375px",
+    },
     colors: {
       "transparent": "transparent",
+      "blue": "hsl(223, 87%, 63%)",
       "pale-blue": "hsl(223, 100%, 88%)",
       "light-red": "hsl(354, 100%, 66%)",
       "gray": "hsl(0, 0%, 59%)",
       "very-dark-blue": "hsl(209, 33%, 12%)",
+      "white": "hsl(0,0%,100%)",
     },
     spacing: {
       "0": "0px",
@@ -20,6 +25,7 @@ module.exports = {
       "2": "0.125rem",
       "4": "0.25rem",
       "8": "0.5rem",
+      "10": "0.625rem",
       "12": "0.75rem",
       "16": "1rem",
       "20": "1.25rem",
@@ -43,10 +49,16 @@ module.exports = {
       "92": "5.75rem",
       "96": "6rem",
       "100": "6.25rem",
+      "116": "7.25rem",
       "128": "8rem",
       "256": "16rem",
       "512": "32rem",
       "1024": "64rem",
+    },
+    fontSize: {
+      "10": ["0.625rem", { lineHeight: "1" }],
+      "12": ["0.75rem", { lineHeight: "1" }],
+      "22": ["1.375rem", { lineHeight: "1" }],
     },
     fontWeight: {
       "300": "300",
