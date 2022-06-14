@@ -49,9 +49,11 @@ class WebForm extends HTMLFormElement {
     const schema = string().required().email();
     const emailIsValid = await schema.isValid(testedEmail);
     if (emailIsValid && !this.buttonIsActive) {
+      this.inputElement.classList.remove("border-light-red", "focus:border-light-red");
       this.errorElement.textContent = "";
       this.activateSubmitButton();
     } else if (!emailIsValid) {
+      this.inputElement.classList.add("border-light-red", "focus:border-light-red");
       this.errorElement.textContent = testedEmail.length <= 0 ? "Please enter a email" : "Please provide a valid email address";
       if (this.buttonIsActive) this.deactivateSubmitButton();
     }
