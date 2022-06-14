@@ -9,6 +9,7 @@ module.exports = {
   theme: {
     screens: {
       sm: "375px",
+      lg: "696px",
     },
     colors: {
       "transparent": "transparent",
@@ -51,6 +52,7 @@ module.exports = {
       "100": "6.25rem",
       "116": "7.25rem",
       "128": "8rem",
+      "200": "12.5rem",
       "256": "16rem",
       "512": "32rem",
       "1024": "64rem",
@@ -58,7 +60,10 @@ module.exports = {
     fontSize: {
       "10": ["0.625rem", { lineHeight: "1" }],
       "12": ["0.75rem", { lineHeight: "1" }],
+      "16": ["1rem", { lineHeight: "1" }],
+      "20": ["1.25rem", { lineHeight: "1" }],
       "22": ["1.375rem", { lineHeight: "1" }],
+      "48": ["3rem", { lineHeight: "1" }],
     },
     fontWeight: {
       "300": "300",
